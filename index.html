@@ -8,39 +8,32 @@
 
 <p>Feel free to contact alinen[at]seas.upenn.edu if you'd like to contribute (or point out) additional code, bugs, improvements, tools, or new resources.
 
-BVH/                   // utilities for working with BVH files
-BVH/bvh_to_matrix.m    // imports a bvh file to matlab
-BVH/matrix_to_bvh.m    // exports a bvh file from matlab (for modifying existing BVH files; 
-                       // it does not support creating a new BVH file from scratch)
-BVH/ImportBVH2Maya.py  // Import a BVH file to Maya
-BVH/ExportBVHFile.py   // Export a BVH file from Maya
-BVH/exportBindPose.mel // Export bind pose of skinned model
-
 <h3>C3D</h3>
 <ul>
 <li><a href="www.c3d.org">C3D website</a>, including the <a href="http://c3d.org/pdf/c3dformat_ug.pdf">specification</a>
 <li><a href="http://c3d.org/downloads/c3d-file-access.zip">C code</a> for loading and saving C3D by Bruce A. MacWilliams.
-<li>
 </ul>
 
 <h3>BVH</h3>
 <ul>
-<li><a href="">BVH file format documentation</a></li>
-<li><a href="">BVH scripts for Matlab</a></li>
-<li><a href="">BVH loader/saver for C++</a></li>
-<li><a href="">BVH scripts for Maya (python)</a></li>
+<li><a href="https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/BVH.html">BVH file format documentation</a></li>
+<li><a href="https://github.com/alinen/MotionScriptTools/blob/master/BVH/bvh_to_matrix.m">BVH importer for Matlab</a></li>
+<li><a href="https://github.com/alinen/MotionScriptTools/blob/master/BVH/matrix_to_bvh.m">BVH exporter for Matlab</a></li>
+<li><a href="">BVH loader/saver for C++ (TODO)</a></li>
+<li><a href="https://github.com/alinen/MotionScriptTools/blob/master/BVH/ExportBVHFile.py">BVH exporter Maya (python)</a></li>
+<li><a href="https://github.com/alinen/MotionScriptTools/blob/master/BVH/ImportBVH2Maya.py">BVH importer Maya (python)</a></li>
 <li><a href="http://www.web3d.org/products/detail/bvh-to-h-anim-motion-capture-conversion-scripts/">BVH to H-Anim scripts</a>. Click <a href="http://ovrt.nist.gov/projects/wear/mocap/">here</a> for additional documentation. </li>
 <li><a href="http://www.seas.upenn.edu/~mocap/cgi-bin/BVH_View/indexCode.txt">Web3D BVH viewer</a> by Emre Tanigan and Kelsey Hurley. Click <a href="BVH_View/index.php?id=Destroy.bvh">here</a> to see a demo. </li>
 </ul>
 
 <h3>ASF/AMC</h3>
 <ul>
-<li><a href="">ASF/AMC file format documentation</a>
-<li><a href="http://mocap.cs.cmu.edu/tools.php">AMC scripts for Matlab</a>
-<li><a href="http://mocap.cs.cmu.edu/tools.php">AMC scripts for Maya</a>
-<li><a href="">ASF/AMC loader/saver for C++</a></li>
-<li><a href=""></a></li>
-<li>ASF/AMC scripts for Maya: Resources and tutorial for loading ASF/AMC into Maya can be found <a href="http://mocap.cs.cmu.edu/asfamcmel/asfamcmel.php">here</a> from the CMU Graphics Lab. They also post the following <a href="http://mocap.cs.cmu.edu/mocap/asfamcExporter.mel">script</a> for exporting ASF/AMC from Maya 6. </li> 
+<li><a href="https://research.cs.wisc.edu/graphics/Courses/cs-838-1999/Jeff/ASF-AMC.html">ASF/AMC file format documentation</a>
+<li><a href="http://graphics.cs.cmu.edu/software/amc_to_matrix.m">AMC loader for Matlab</a>
+<li><a href="http://graphics.cs.cmu.edu/software/matrix_to_amc.m">AMC saver for Matlab</a>
+<li><a href="http://mocap.cs.cmu.edu/asfamcmel/asfamcmel.php">AMC import for Maya</a>
+<li><a href="http://mocap.cs.cmu.edu/mocap/asfamcExporter.mel">AMC export for Maya</a>
+<li><a href="http://graphics.cs.cmu.edu/software/mocapPlayer.zip">ASF/AMC loader/saver for C++</a></li>
 </ul>
 
 <h3>Motion Builder</h3>
@@ -48,14 +41,14 @@ BVH/exportBindPose.mel // Export bind pose of skinned model
 <li>neil3d
 <li><a href="http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=10775847">FBX SDK</a> is available free from Autodesk
 <li><a href="http://docs.autodesk.com/FBX/2014/ENU/FBX-SDK-Documentation/index.html">FBX documentation</a>
-<li>How load AMC/BVH data and retarget to a new skeleton
-<li>How to import C3D and save to BVH
-<li>How to use a control rig to fix self-intersections, errors, etc
-<li>How to write python scripts to fix footscape and output contact annotations
+<li><a href="https://alinen.github.com/MotionScriptTools/notes/MotionBuilderAMCBVH.html">How load AMC/BVH data and retarget to a new skeleton</a>
+<li><a href="https://alinen.github.com/MotionScriptTools/notes/MotionBuilderC3D.html">How to import C3D and save to BVH</a>
+<li><a href="https://alinen.github.com/MotionScriptTools/notes/MotionBuilderCleanup.html">How to use a control rig to fix self-intersections, errors, etc</a>
+<li><a href="https://alinen.github.com/MotionScriptTools/notes/MotionBuilderFootScripts.html">How to write python scripts to fix footscape and output contact annotations</a>
  <ul>
-    <li>ExportContacts.py, output text files of when end effectors are close to the floor
-    <li>PrintCurve.py, output channel curves, such as X,Y,Z translation
-    <li>ToesToFloor.py, clamp toes to the floor, cleanup foot sliding
+    <li><a href="https://github.com/alinen/MotionScriptTools/blob/master/motion_builder/ExportContacts.py">ExportContacts.py</a>, output text files of when end effectors are close to the floor
+    <li><a href="https://github.com/alinen/MotionScriptTools/blob/master/motion_builder/PrintCurve.py">PrintCurve.py</a>, output channel curves, such as X,Y,Z translation
+    <li><a href="https://github.com/alinen/MotionScriptTools/blob/master/motion_builder/ToesToFloor.py">ToesToFloor.py</a>, clamp toes to the floor, cleanup foot sliding
  </ul>
 </ul>
 
